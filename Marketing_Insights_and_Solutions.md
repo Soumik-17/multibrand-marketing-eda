@@ -2,7 +2,7 @@
 
 **Answers to the Business Problems — Nykaa vs Purplle vs Tira**
 
-Prepared by: [Your Name], Data Analyst (Fresher)
+Prepared by: Soumik Bhul, Data Analyst (Fresher)
 Date: August 2026
 
 ---
