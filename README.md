@@ -43,8 +43,8 @@ The analysis was built to answer the following questions:
 | File | Description |
 |---|---|
 | `notebooks/marketing-eda.ipynb` | Full exploratory data analysis notebook |
-| `Business_Problem_Statement.docx` | Scenario, dataset overview, and business questions |
-| `Marketing_Insights_and_Solutions.docx` | Answers to each business question with data, insights, and recommendations |
+| `Business_Problem_Statement.md` | Scenario, dataset overview, and business questions |
+| `Marketing_Insights_and_Solutions.md` | Answers to each business question with data, insights, and recommendations |
 
 ## Note
 
