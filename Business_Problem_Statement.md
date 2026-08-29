@@ -2,7 +2,7 @@
 
 **Multi-Brand Marketing Campaign Performance Analysis**
 
-Prepared by: [Your Name], Data Analyst (Fresher)
+Prepared by: Soumik Bhul, Data Analyst (Fresher)
 Date: August 2026
 
 ---
