@@ -46,6 +46,14 @@ The analysis was built to answer the following questions:
 | `Business_Problem_Statement.md` | Scenario, dataset overview, and business questions |
 | `Marketing_Insights_and_Solutions.md` | Answers to each business question with data, insights, and recommendations |
 
+## Challenges Faced
+
+- **Duplicate-looking columns**: Target_Audience and Customer_Segment both used the exact same five categories (Youth, College Students, Working Women, Premium Shoppers, Tier 2 City Customers). I had to decide whether to treat them as two different things or one — I chose to analyze only Customer_Segment to avoid repeating the same breakdown twice under different names.
+- **Multi-value column**: Channel_Used had comma-separated values (e.g. "Email, Instagram"), so a single campaign could belong to more than one channel. I had to split and explode this column before I could group by channel correctly — a straightforward groupby() would have undercounted every multi-channel campaign.
+- **Unrealistic cost-to-revenue ratio**: When I calculated ROAS (Revenue ÷ Acquisition Cost) myself, the numbers came out at roughly 1,300x, which isn't realistic for any real marketing campaign. This suggested the Revenue and Acquisition_Cost columns were likely on different scales. Instead of reporting a misleading ratio, I decided to rely on the dataset's own ROI column and other normalized metrics (CTR%, Conversion Rate%) that don't depend on comparing those two columns directly.
+- **Near-identical brand performance**: All three brands came out almost the same on every top-level metric (revenue, ROI, CTR), which made it clear this is a synthetic/practice dataset rather than real business data. This changed how I framed the insights — instead of saying "Brand X is better," I focused on smaller, more specific differences (like campaign type or channel) where real patterns did show up.
+- **Kaggle access from a sandboxed environment**: I originally tried to pull the dataset directly using kagglehub inside a restricted environment, which failed due to network/auth restrictions. I worked around this by downloading the CSVs locally first and loading them directly with pandas.read_csv().
+
 ## Note
 
 The dataset used in this project is taken from [Kaggle](https://www.kaggle.com/datasets/sshriya08/multi-brand-marketing-campaign-performance-dataset), and the business problem described above is a hypothetical scenario created for practice purposes only.
